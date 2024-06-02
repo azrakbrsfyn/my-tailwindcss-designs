@@ -7,8 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <nav class="sticky bg-white shadow-2xl mx-6 my-6 max-w-52 rounded-xl min-h-96">
-        <div class="flex flex-col justify-center items-center">
+    <!-- Navbar -->
+    <nav class="sm:fixed top-0 left-0 justify-center bg-white shadow-2xl mx-6 my-6 min-w-56 max-w-72 rounded-xl h-5/6">
+        <div class="sm:flex sm:flex-col hidden justify-center items-center w-full">
             <div class="flex mt-20 space-x-2 justify-center items-center p-2 w-full text-indigo-950 hover:text-white hover:bg-indigo-950 group transition duration-500 rounded-xl">
                 <svg class="w-6 h-6 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1m0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1M13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1"/>
@@ -22,7 +23,7 @@
                 <a href="#" class="font-bold">My Notes</a>
               </div>
             
-              <div class="flex mt-72 mb-10 space-x-2 justify-center items-center p-2 w-full text-indigo-950 hover:text-white hover:bg-indigo-950 group transition duration-500 rounded-xl">
+              <div class="flex mt-60 mb-10 space-x-2 justify-center items-center p-2 w-full text-indigo-950 hover:text-white hover:bg-indigo-950 group transition duration-500 rounded-xl">
                 <svg class="w-6 h-6 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path fill="currentColor" fill-rule="evenodd" d="M10.796 2.244C12.653 1.826 14 3.422 14 5v14c0 1.578-1.347 3.174-3.204 2.756C6.334 20.752 3 16.766 3 12s3.334-8.752 7.796-9.756m5.497 6.049a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L17.586 13H9a1 1 0 1 1 0-2h8.586l-1.293-1.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/>
                 </svg>
@@ -30,5 +31,74 @@
               </div>
         </div>
     </nav>
+    <nav>  
+        <div class="fixed sm:hidden z-50 w-4/5 h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 shadow-xl">
+            <div class="grid h-full max-w-lg grid-cols-3 mx-auto">
+                <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-indigo-950 active:bg-indigo-950 dark:hover:bg-indigo-950 group transition duration-500">
+                    <svg class="w-6 h-6 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1m0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1M13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1"/>
+                    </svg>
+                </button>
+                <button data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-indigo-950 active:bg-indigo-950 dark:hover:bg-indigo-950 group transition duration-500">
+                    <svg class="w-6 h-6 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="m16.394 2.021l.066.018c1.1.295 1.971.528 2.656.776c.701.253 1.273.542 1.744.983a4.75 4.75 0 0 1 1.378 2.389c.147.628.112 1.268-.02 2.001c-.127.718-.36 1.589-.655 2.688l-.536 1.999c-.294 1.099-.528 1.97-.775 2.656c-.254.7-.543 1.272-.984 1.743a4.75 4.75 0 0 1-2.302 1.358a4.75 4.75 0 0 1-1.106 1.567c-.471.441-1.043.73-1.744.984c-.685.248-1.556.481-2.655.776l-.067.018c-1.1.294-1.97.527-2.688.656c-.733.131-1.373.166-2.002.02a4.75 4.75 0 0 1-2.388-1.38c-.44-.47-.73-1.042-.984-1.743c-.247-.685-.48-1.556-.775-2.656l-.536-1.998c-.294-1.1-.528-1.97-.656-2.688c-.131-.733-.166-1.373-.02-2.002a4.75 4.75 0 0 1 1.38-2.388c.47-.44 1.042-.73 1.743-.984c.685-.247 1.556-.48 2.655-.775l.034-.01l.751-.2c.392-1.399.736-2.388 1.408-3.105a4.75 4.75 0 0 1 2.388-1.379c.629-.146 1.268-.111 2.002.02c.717.128 1.588.362 2.688.656M7.455 7.503c-1.093.293-1.876.505-2.478.722c-.61.22-.967.424-1.227.668a3.25 3.25 0 0 0-.944 1.634c-.08.348-.079.76.036 1.397c.115.647.332 1.457.637 2.597l.518 1.932c.305 1.14.523 1.95.746 2.567c.22.61.424.968.668 1.228a3.25 3.25 0 0 0 1.634.944c.347.08.76.078 1.397-.036c.647-.115 1.457-.332 2.597-.637c1.14-.306 1.95-.523 2.568-.747c.609-.22.967-.424 1.227-.667c.138-.13.263-.27.376-.419a10.077 10.077 0 0 1-.554-.095c-.672-.134-1.48-.35-2.475-.617l-.058-.015c-1.099-.295-1.97-.528-2.655-.776c-.701-.253-1.273-.542-1.744-.983a4.75 4.75 0 0 1-1.379-2.389c-.146-.628-.111-1.268.02-2.001c.128-.718.362-1.589.656-2.688zm5.987-4.661c-.638-.115-1.05-.117-1.397-.036a3.25 3.25 0 0 0-1.634.944c-.436.465-.705 1.185-1.171 2.893c-.076.278-.156.577-.243.902l-.518 1.932c-.305 1.14-.522 1.95-.637 2.597c-.115.637-.117 1.05-.036 1.397a3.25 3.25 0 0 0 .944 1.634c.26.244.618.447 1.227.668c.618.223 1.428.44 2.568.746c1.025.275 1.785.478 2.403.6c.615.123 1.033.153 1.375.111c.075-.01.146-.022.216-.038a3.25 3.25 0 0 0 1.634-.944c.244-.26.448-.618.668-1.227c.223-.618.44-1.428.746-2.568l.518-1.932c.305-1.14.522-1.95.637-2.597c.114-.637.117-1.05.036-1.397a3.25 3.25 0 0 0-.944-1.634c-.26-.244-.618-.447-1.227-.668c-.619-.223-1.428-.44-2.568-.746c-1.14-.305-1.95-.522-2.597-.637m-2.39 6.964a.75.75 0 0 1 .919-.53l4.83 1.294a.75.75 0 0 1-.389 1.448l-4.83-1.294a.75.75 0 0 1-.53-.918m-.777 2.898a.75.75 0 0 1 .92-.53l2.897.776a.75.75 0 0 1-.388 1.449l-2.898-.777a.75.75 0 0 1-.53-.918" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <button data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-indigo-950 active:bg-indigo-950 dark:hover:bg-indigo-950 group rounded-e-full transition duration-500">
+                    <svg class="w-6 h-6 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd" d="M10.796 2.244C12.653 1.826 14 3.422 14 5v14c0 1.578-1.347 3.174-3.204 2.756C6.334 20.752 3 16.766 3 12s3.334-8.752 7.796-9.756m5.497 6.049a1 1 0 0 1 1.414 0l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L17.586 13H9a1 1 0 1 1 0-2h8.586l-1.293-1.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sm:ms-72 ms-10 my-6 mr-10 mb-32">
+        <h1 class="text-indigo-950 font-bold sm:text-3xl text-2xl">Welcome to Your Dashboard!</h1>
+        <p class="text-gray-500">Enjoy your note-taking stuff! Write everything and anything without any limit.</p>
+        <div class="flex flex-col sm:flex-row sm:space-x-10 items-center mt-5">
+            <div class="bg-emerald-200 rounded-xl shadow-xl w-30"><img src="./img/man.png" alt=""></div>
+            <div class="flex flex-col items-center sm:items-start">
+                <div class="sm:mt-0 mt-5"><h3 class="text-2xl text-indigo-950 font-bold ">Azriel Akbar Sofyan</h3></div>
+                <div><p class="text-gray-500">azrielakbarsofyan@gmail.com</p></div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center sm:justify-start sm:items-start mt-10">
+            <h4 class="font-bold text-indigo-950 text-xl">Your Total Notes</h4>
+            <div class="flex w-40 h-40 sm:w-44 sm:h-44 bg-purple-100 rounded-xl shadow-xl items-center justify-center mt-5">
+                <h4 class="font-bold text-indigo-950 text-4xl">20</h4>
+            </div>
+        </div>
+        <div class="flex flex-col mt-10">
+            <h4 class="font-bold text-xl text-indigo-950">Let's Review Your Notes!</h4>
+            <p class="text-gray-500">Here you can recall randomly your notes that you have written before.</p>
+            <div class="flex flex-wrap flex-auto mt-5 justify-center sm:justify-start">
+                <div class="bg-indigo-950 shadow-xl text-white w-52 p-6 rounded-xl mt-5 sm:mr-5">
+                    <h4 class="font-bold text-xl">Title</h4>
+                    <p class="font-bold text-sm">2/6/2024</p>
+                    <p class="text-sm mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est quos, omnis aliquam fugiat alias ratione qui blanditiis dignissimos tenetur exercitationem voluptas aliquid ipsa soluta eius. Fugit iste inventore voluptatibus.</p>
+                    <a href="#" class="bg-indigo-900 text-white text-sm p-2 rounded-xl hover:bg-indigo-500 hover:text-white transition duration-500"><button>See Details</button></a>
+                </div>
+                <div class="bg-indigo-950 shadow-xl text-white w-52 p-6 rounded-xl mt-5 sm:mr-5">
+                    <h4 class="font-bold text-xl">Title</h4>
+                    <p class="font-bold text-sm">2/6/2024</p>
+                    <p class="text-sm mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est quos, omnis aliquam fugiat alias ratione qui blanditiis dignissimos tenetur exercitationem voluptas aliquid ipsa soluta eius. Fugit iste inventore voluptatibus.</p>
+                    <a href="#" class="bg-indigo-900 text-white text-sm p-2 rounded-xl hover:bg-indigo-500 hover:text-white transition duration-500"><button>See Details</button></a>
+                </div>
+                <div class="bg-indigo-950 shadow-xl text-white w-52 p-6 rounded-xl mt-5 sm:mr-5">
+                    <h4 class="font-bold text-xl">Title</h4>
+                    <p class="font-bold text-sm">2/6/2024</p>
+                    <p class="text-sm mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est quos, omnis aliquam fugiat alias ratione qui blanditiis dignissimos tenetur exercitationem voluptas aliquid ipsa soluta eius. Fugit iste inventore voluptatibus.</p>
+                    <a href="#" class="bg-indigo-900 text-white text-sm p-2 rounded-xl hover:bg-indigo-500 hover:text-white transition duration-500"><button>See Details</button></a>
+                </div>
+                <div class="bg-indigo-950 shadow-xl text-white w-52 p-6 rounded-xl mt-5 sm:mr-5">
+                    <h4 class="font-bold text-xl">Title</h4>
+                    <p class="font-bold text-sm">2/6/2024</p>
+                    <p class="text-sm mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate est quos, omnis aliquam fugiat alias ratione qui blanditiis dignissimos tenetur exercitationem voluptas aliquid ipsa soluta eius. Fugit iste inventore voluptatibus.</p>
+                    <a href="#" class="bg-indigo-900 text-white text-sm p-2 rounded-xl hover:bg-indigo-500 hover:text-white transition duration-500"><button>See Details</button></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
